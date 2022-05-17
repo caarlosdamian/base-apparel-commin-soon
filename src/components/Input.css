@@ -1,0 +1,96 @@
+:root{
+    --pink:#CE9898;
+    --red:#F96464;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+input {
+    flex-grow: 2;
+    border: none;
+    padding: 15px 32px;
+    background: transparent;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border: 1px solid var(--pink);
+    border-radius: 28px;
+    outline: none;
+    width: 445px;
+    height: 56px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--pink);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+button {
+    /* Just a little styling to make it pretty */
+    cursor: pointer;
+    background: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+    box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+    border-radius: 28px;
+    width: 100px;
+    height: 56px;
+    border: none;
+    position: absolute;
+    left: 345px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+    box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+    opacity: .7;
+}
+
+.alert {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 28px;
+    margin-left: 32px;
+    margin-top: 7px;
+    color: var(--red);
+}
+
+.error-input {
+    border: 2px solid var(--red);
+}
+
+.icon-error {
+    position: absolute;
+    right: 116px;
+    top: 30%;
+}
+
+@media (max-width:375px) {
+    input {
+        max-width: 311px;
+        padding: 9px 24px;
+    }
+
+    button {
+        left: 210px;
+    }
+
+    .alert {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+        margin-right: 150px;
+        margin-top: 8px;
+    }
+}

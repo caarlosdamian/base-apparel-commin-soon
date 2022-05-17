@@ -1,45 +1,32 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from "react";
+import logo from "./images/logo.svg";
+import "./App.css";
+import { Input } from "./components/Input";
+import pattern from './images/bg-pattern-desktop.svg'
+import women from "./images/hero-desktop.jpg";
+import womenMobile from "./images/hero-mobile.jpg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
+    <main className="App">
+      <img src={pattern} alt="pattern" className="pattern" />
+      <div className="left">
+        <img src={logo} alt="logo" className="logo" />
+        <span className="left__header-span">WE'RE</span>
+        <h1 className="left__header">COMING SOON</h1>
+        <p className="left__subtitle">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
         </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+        <Input />
+      </div>
+      <div className="right">
+        <img className="women" src={women} alt="" />
+        <img className="women-mobile" src={womenMobile} alt="" />
+      </div>
+    </main>
+  );
 }
 
-export default App
+export default App;
